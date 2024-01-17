@@ -30,6 +30,9 @@ struct ContentView: View {
                 Button("New game"){
                     score = 0
                     gameIsInProgress = true
+                    Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { (_) in
+                        gameIsInProgress = false
+                    }
                 }.padding()
             }
         }
